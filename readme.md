@@ -44,4 +44,4 @@ labels : 한번에 여러 그래프를 그릴 경우에만 해당되는 변수�
 1. Do example.py
 
 ![single plot and linear regression](/paper/figure/example1.jpg)
-![multi plot](/paper/figure/example2.jpg)
+![multi plot](/paper/figure/example2.png)
