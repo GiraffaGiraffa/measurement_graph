@@ -41,6 +41,4 @@ File_format : jpg, png, pdf등이 가능. default는 'pdf'이다.
 
 1. Do example.py
 
-Result
-
 ![Alt text](/paper/figure/example.jpg)
