@@ -22,4 +22,4 @@ data = csv_data(data_path)
 # Plot(X = data['V1'], Y = data['V2'], X_unit = 'V', Y_unit = 'V', X_name = '$V_1$', Y_name = '$V_2$', graph_name = 'example', save_path = save_path, linear_fit = True, File_format = 'pdf')
 # default: linear_fit = False, File_format = 'pdf'
 
-Plot(data['V1'], data['V2'], 'V', 'V', '$V_1$', '$V_2$', 'example', save_path, True, 'pdf')
+Plot(data['V1'], data['V2'], 'V', 'V', '$V_1$', '$V_2$', 'example', save_path, True, 'jpg')

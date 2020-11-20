@@ -43,4 +43,4 @@ File_format : jpg, png, pdf등이 가능. default는 'pdf'이다.
 
 Result
 
-![Alt text](/paper/figure/example.pdf)
+![Alt text](/paper/figure/example.jpg)
