@@ -17,11 +17,11 @@ csv file의 경로를 인자로 넣어주면 V1, V2, Time을 key로 가지는 py
 
 ### Plot
 인자는 다음과 같다.
-X, Y, X_unit, Y_unit, X_name, Y_name, graph_name, save_path, linear_fit = False, File_format = 'pdf'
+X, Y, X_unit, Y_unit, X_name, Y_name, graph_name, save_path, linear_fit = False, File_format = 'pdf', labels = None
 
-X : X data(array)
+X : X data(array) (한번에 여러 개를 그릴 때에는 \[\[...\],\[...\]...\]의 형식으로 넣어준다.)
 
-Y : Y data(array)
+Y : Y data(array) (X와 같다.)
 
 X_unit : X의 단위
 
@@ -35,10 +35,13 @@ linear_fit : 선형회귀 그래프를 사용할 것이면 True. default는 Fals
 
 File_format : jpg, png, pdf등이 가능. default는 'pdf'이다.
 
+labels : 한번에 여러 그래프를 그릴 경우에만 해당되는 변수로, 각 데이터의 레이블을 적어준다.
+
 단위를 스케일링해서 플롯해준다. latex 형태의 input은 $(수식)$으로 사용 가능하다.
 
 ## run tutorial
 
 1. Do example.py
 
-![Alt text](/paper/figure/example.jpg)
+![single plot and linear regression](/paper/figure/example1.jpg)
+![multi plot](/paper/figure/example2.jpg)

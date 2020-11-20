@@ -23,13 +23,13 @@ def scale(xmax):
     else:
         return 1e-9,'n'
 
-def Plot(X, Y, X_unit, Y_unit, X_name, Y_name, graph_name, save_path, linear_fit = False, File_format = 'pdf'):
+def Plot(X, Y, X_unit, Y_unit, X_name, Y_name, graph_name, save_path, linear_fit = False, File_format = 'pdf', labels = None):
     X = np.array(X)
     Y = np.array(Y)
     plt.rc('font', size = 13)
     plt.rcParams["font.family"] = "Times New Roman"
-    Xscale, xunit_prefix = scale(max(abs(X)))
-    Yscale, yunit_prefix = scale(max(abs(Y)))
+    Xscale, xunit_prefix = scale(np.max(np.reshape(abs(X), -1)) - np.min(np.reshape(abs(X), -1)))
+    Yscale, yunit_prefix = scale(np.max(np.reshape(abs(Y), -1)) - np.min(np.reshape(abs(Y), -1)))
 
     #linear reggretion
     if linear_fit:
@@ -62,7 +62,15 @@ def Plot(X, Y, X_unit, Y_unit, X_name, Y_name, graph_name, save_path, linear_fit
     plt.xlabel(X_name+'['+xunit_prefix+X_unit+']')
     plt.ylabel(Y_name+'['+yunit_prefix+Y_unit+']')
 
-    plt.plot(X, Y,'.', label='experiment', markersize = 2, color = 'black')
+    if len(X.shape)==1:
+        plt.plot(X, Y,'.', label= 'experiment' if linear_fit else None, markersize = 2, color = 'black')
+    else:
+        if(len(labels) != X.shape[0]):
+            print('len of label != input #')
+            exit()
+        for i in range(X.shape[0]):
+            plt.plot(X[i], Y[i], label = labels[i], markersize = 2)
+
 
     plt.legend()
     plt.savefig(os.path.join(save_path, graph_name+'.'+File_format))

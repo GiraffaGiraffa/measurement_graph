@@ -19,7 +19,11 @@ data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data\\exp_
 data = csv_data(data_path)
 
 # variables in Plot
-# Plot(X = data['V1'], Y = data['V2'], X_unit = 'V', Y_unit = 'V', X_name = '$V_1$', Y_name = '$V_2$', graph_name = 'example', save_path = save_path, linear_fit = True, File_format = 'pdf')
+# Plot(X = data['V1'], Y = data['V2'], X_unit = 'V', Y_unit = 'V', X_name = '$V_1$', Y_name = '$V_2$', graph_name = 'example', save_path = save_path, linear_fit = True, File_format = 'pdf', label = 'None')
 # default: linear_fit = False, File_format = 'pdf'
 
-Plot(data['V1'], data['V2'], 'V', 'V', '$V_1$', '$V_2$', 'example', save_path, True, 'jpg')
+# single plot and linear regression
+Plot(data['V1'], data['V2'], 'V', 'V', '$V_1$', '$V_2$', 'example1', save_path, True, 'jpg')
+
+# multi plot
+Plot([data['time'], data['time']] , [data['V1'], data['V2']], 'V', 'V', '$V_1$', '$V_2$', 'example2', save_path, False, 'png', labels = ('V1', 'V2'))
