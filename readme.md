@@ -10,7 +10,9 @@ pandas
 ## 함수 설명
 ### csv_data
 WaveForms를 사용할때만 사용 가능.
+
 csv file의 경로를 인자로 넣어주면 V1, V2, Time을 key로 가지는 python dictionary를 return한다.
+
 각각 V1, V2, Time의 numpy array를 가지고 있다.
 
 ### Plot
@@ -18,9 +20,11 @@ csv file의 경로를 인자로 넣어주면 V1, V2, Time을 key로 가지는 py
 X, Y, X_unit, Y_unit, X_name, Y_name, graph_name, save_path, linear_fit = False, File_format = 'pdf'
 
 X : X data(array)
+
 Y : Y data(array)
 
 X_unit : X의 단위
+
 Y_unit : Y의 단위
 
 graph_name : 저장되는 그래프의 이름
@@ -36,3 +40,7 @@ File_format : jpg, png, pdf등이 가능. default는 'pdf'이다.
 ## run tutorial
 
 1. Do example.py
+
+Result
+
+![Alt text](/paper/figure/example.pdf)
