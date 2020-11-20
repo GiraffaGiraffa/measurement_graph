@@ -26,4 +26,4 @@ data = csv_data(data_path)
 Plot(data['V1'], data['V2'], 'V', 'V', '$V_1$', '$V_2$', 'example1', save_path, True, 'jpg')
 
 # multi plot
-Plot([data['time'], data['time']] , [data['V1'], data['V2']], 'V', 'V', '$V_1$', '$V_2$', 'example2', save_path, False, 'png', labels = ('V1', 'V2'))
+Plot([data['time'], data['time']] , [data['V1'], data['V2']], 's', 'V', '$t$', '$V_{1}, V_{2}$', 'example2', save_path, False, 'png', labels = ('$V_{1}$', '$V_{2}$'))
