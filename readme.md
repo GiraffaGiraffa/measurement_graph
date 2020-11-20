@@ -10,6 +10,8 @@ pandas
 ## Quick Use
 
 ```python
+#data = dictionary format data from WaveForms exported raw data
+data = csv_data(data_path)
 # single plot and linear regression
 Plot(data['V1'], data['V2'], 'V', 'V', '$V_1$', '$V_2$', 'example1', save_path, True, 'jpg')
 # multi plot
