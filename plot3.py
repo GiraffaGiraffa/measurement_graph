@@ -42,7 +42,7 @@ Plot(data['time'], data['V1'], 's', 'V', '$time$', '$voltage$', '3.1.2', save_pa
 
 data_path = 'C:\\Users\\giraa\\source\\repos\\measurement_graph\\data\\3.0.5.fft.csv'
 data = csv_data(data_path)
-Plot(data['time'], data['V1'], 's', 'V', '$time$', '$voltage$', '3.0.5.fft', save_path, False, 'pdf', labels = '$V_{out}$')
+Plot(data['time'], data['V1'], 'Hz', 'dB', '$frequency$', '$intensity$', '3.0.5.fft', save_path, False, 'pdf', labels = '$V_{out}$')
 
 data_path = 'C:\\Users\\giraa\\source\\repos\\measurement_graph\\data\\3.2.csv'
 data = csv_data(data_path)
