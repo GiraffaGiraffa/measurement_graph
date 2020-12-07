@@ -28,6 +28,7 @@ def Plot(X, Y, X_unit, Y_unit, X_name, Y_name, graph_name, save_path, linear_fit
     Y = np.array(Y)
     plt.rc('font', size = 13)
     plt.rcParams["font.family"] = "Times New Roman"
+    
     Xscale, xunit_prefix = scale(np.max(np.reshape(abs(X), -1)) - np.min(np.reshape(abs(X), -1)))
     Yscale, yunit_prefix = scale(np.max(np.reshape(abs(Y), -1)) - np.min(np.reshape(abs(Y), -1)))
 
